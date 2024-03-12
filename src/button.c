@@ -19,7 +19,7 @@ void display_button(struct_t *all)
 
 void click(struct_t *all)
 {
-    sfVector2i mouse = sfMouse_getPosition(all->window);
+    sfVector2i mouse = sfMouse_getPositionRenderWindow(all->window);
 
     if (mouse.x >= 803 && mouse.x <= 1099) {
         if (mouse.y >= 409 && mouse.y <= 489) {

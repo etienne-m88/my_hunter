@@ -23,9 +23,8 @@ void display_bird(struct_t *all)
 
 void click_bird(struct_t *all)
 {
-    sfVector2i mouse = sfMouse_getPosition(all->window);
+    sfVector2i mouse = sfMouse_getPositionRenderWindow(all->window);
     sfFloatRect size = sfSprite_getGlobalBounds(all->bird);
-    sfVector2f vec = {0, rand() % 880};
     sfVector2f cord;
 
     cord = sfRenderWindow_mapPixelToCoords(all->window, mouse, NULL);
